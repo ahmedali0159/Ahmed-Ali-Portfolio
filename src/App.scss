@@ -1,0 +1,34 @@
+@import './Styles/layout.scss';
+@import './Styles/navBar.scss';
+@import './Styles/typhography.scss';
+@import './Styles/title.scss';
+@import './Styles/about.scss';
+@import './Styles/skills.scss';
+@import './Styles/contact.scss';
+<<<<<<< HEAD
+@import './Styles/portfolio.scss';
+=======
+>>>>>>> 1823665d35e9b537733e86e01052a8fee1f9d0f7
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar{
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #ff8f63a6;
+    border-radius: 100px;
+}
+body::-webkit-scrollbar-track{
+    background-color:gray;
+}
+body{
+    color:#222222;
+    font-family: 'Antonio', sans-serif;
+    font-size: 1.2rem;
+}
+span{
+    color: #ff9063;
+}

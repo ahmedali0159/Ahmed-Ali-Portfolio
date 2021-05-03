@@ -3,10 +3,22 @@
 @import './Styles/typhography.scss';
 @import './Styles/title.scss';
 @import './Styles/about.scss';
+@import './Styles/skills.scss';
+@import './Styles/contact.scss';
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+body::-webkit-scrollbar{
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #ff8f63a6;
+    border-radius: 100px;
+}
+body::-webkit-scrollbar-track{
+    background-color:gray;
 }
 body{
     color:#222222;

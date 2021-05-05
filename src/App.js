@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.scss';
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
@@ -9,10 +9,20 @@ import Contact from "./Pages/Contact";
 import Blog from "./Pages/Blog";
 
 function App() {
+  const [navToggle, setNavToggle] = useState(false);
+
+  const navClick = () => {
+    setNavToggle(!navToggle)
+  }
   return (
  <div className="App">
-   <div className="sidebar">
+   <div className={`sidebar ${navToggle ? 'nav-toggle': '' }`}>
      <Navbar/>
+   </div>
+   <div className="nav-btn" onClick={navClick}>
+     <div className="lines1"></div>
+     <div className="lines2"></div>
+     <div className="lines3"></div>
    </div>
    <div className="main-content">
      <div className="content">

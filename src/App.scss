@@ -29,3 +29,8 @@ body{
 span{
     color: #ff9063;
 }
+@media screen and (max-width: 411px){
+  html{
+    font-size: 70px;
+  }
+}

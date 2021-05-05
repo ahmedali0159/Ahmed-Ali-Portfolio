@@ -1,7 +1,7 @@
 import React from 'react'
 
 function PortfolioInfo(props) {
-    const {name, img, description} = props.portfolio;
+    const {name, img, description, link1, link2, link3} = props.portfolio;
     return (
       <div className="col-md-4 card-main">
             <div className="card">
@@ -17,17 +17,17 @@ function PortfolioInfo(props) {
             </div>
            </div>
             <div className="show">
-               <a href="">
+               <a href={link1} target='blank'>
                    <button className="btn github">
                        Github
                    </button>
                </a>
-               <a href="">
+               <a href={link2} target='blank'>
                    <button className="btn github">
                        Github
                    </button>
                </a>
-               <a href="">
+               <a href={link3} target='blank'>
                    <button className="btn github">
                        Live
                    </button>

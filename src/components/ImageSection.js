@@ -1,40 +1,83 @@
-import React from "react";
-import about from "../images/side profile.jpg";
+import React from 'react'
+import styled from 'styled-components';
+import resume from '../images/Ahmed avatar.jpg';
+import PrimaryButton from './PrimaryButton';
 
 function ImageSection() {
-  return (
-    <div className="image-section">
-      <div className="img">
-        <img src={about} alt="" />
-      </div>
-      <div className="about-info">
-        <h4>
-          <span>Ahmed Ali</span>
-        </h4>
-        <p className="about-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-          labore, temporibus nobis ipsum qui iste.
-        </p>
-        <div className="about-details">
-          <div className="left-section">
-            <p>Age</p>
-            <p>Nationality</p>
-            <p>Languages</p>
-            <p>Address</p>
-          </div>
-          <div className="right-section">
-            <p>: 22</p>
-            <p>: Bangladesh</p>
-            <p>: Bangla English</p>
-            <p>: Dhaka,Bangladesh</p>
-          </div>
-        </div>
-        <a href="https://drive.google.com/file/d/1-BAPNupAJZrQu0hzSJm4na_4XXazNRtE/view" target="blank">
-        <button className="btn">Download Cv</button>
-        </a>
-      </div>
-    </div>
-  );
+    return (
+        <ImageSectionStyled>
+            <div className="left-content">
+                <img src={resume} alt="" />
+            </div>
+            <div className="right-content">
+                    <h4>I am <span>Ahmed Ali</span></h4>
+                  <p className="paragraphy">
+                I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.
+                </p>
+                <div className="about-info">
+                    <div className="info-title">
+                        <p>Full Name</p>
+                        <p>Age</p>
+                        <p>Nationality</p>
+                        <p>Languages</p>
+                        <p>Address</p>
+                    </div>
+                    <div className="info">
+                        <p>: Ahmed Ali</p>
+                        <p>: 22</p>
+                        <p>: Banladesh</p>
+                        <p>: Bangla, English</p>
+                        <p>: Uttar badda, Dhaka-1212</p>
+                    </div>
+                </div>
+               <a href="https://github.com/ahmedali0159" target="blank">
+               <PrimaryButton title={'Download Cv'}></PrimaryButton>
+               </a>
+            </div>
+        </ImageSectionStyled>
+    )
 }
 
-export default ImageSection;
+const ImageSectionStyled =  styled.div `
+    margin-top: 5rem;
+    display: flex;
+    .left-content{
+        width: 100%;
+        img{
+            width:95%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .right-content{
+        width: 100%;
+        h4{
+            font-size: 2rem;
+            color: var(--white-color);
+            span{
+                font-size: 2rem;
+                color: var(--primary-color);
+            }
+        }
+        .paragraphy{
+            padding:1rem 0;
+        }
+        .about-info{
+            display: flex;
+            padding-bottom: 1.5rem;
+            .info-title{
+                padding-right: 3rem;
+                p{
+                    font-weight: 600;
+                }
+            }
+            .info-title, .info{
+              p{
+                padding: .3rem 0;
+              }
+            }
+        }
+      
+    }
+`;
+export default ImageSection

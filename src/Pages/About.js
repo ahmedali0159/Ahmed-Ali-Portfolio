@@ -16,7 +16,7 @@ function About() {
 }
 
 const AboutStyled = styled.section `
-
+ 
 `;
 
 export default About

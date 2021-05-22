@@ -38,7 +38,7 @@ function Contact() {
                         <label htmlFor="">Enter Your Message*</label>
                         <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
                     </div>
-                    <div className="form-field">
+                    <div className="form-field f-btn">
                         <PrimaryButton title={'Send Mail'} />
                     </div>
                 </form>
@@ -59,14 +59,21 @@ const ContactStyled = styled.div `
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 2rem;
+        @media screen and (max-width: 978px){
+            grid-template-columns: repeat(1, 1fr);
+            .f-btn{
+                margin-bottom: 3rem;
+            }
+        }
         .right-content{
             display: flex;
             flex-direction: column;
+            
         }
         .contact-title{
             h4{
                 color: var(--white-color);
-                font-size: 1.2rem;
+                font-size: 1.8rem;
                 padding: 1rem;
             }
         }

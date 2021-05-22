@@ -54,8 +54,12 @@ const SkiilsSectionStyled = styled.div `
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3rem;
     grid-row-gap: 2rem;
+    @media screen and (max-width:767px){
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
   }
-
+ 
 `;
 
 export default SkillsSection

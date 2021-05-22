@@ -35,6 +35,20 @@ body{
     background-color:var(--background-dark-color);
     color: var(--font-light-color);
 }
+body::-webkit-scrollbar{
+    width: 9px;
+    background-color: #383838;
+}
+body::-webkit-scrollbar-thumb{
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--border-color);
+}
+body::-webkit-scrollbar-track{
+    height: 5px;
+    border-radius: 10px;
+    background-color: #383838;
+}
 a{
     font-family: inherit;
     color: inherit;
@@ -50,6 +64,25 @@ h1{
 }
 span{
     color: var(--primary-color);
+}
+.humburger-menu{
+    position: absolute;
+    right: 5%;
+    top: 3%; 
+    display: none;
+    z-index: 15;
+    svg{
+        font-size: 3rem;
+    }
+  }
+  .nav-toggle{
+    transform: translateX(0);
+    z-index: 20;
+}
+  @media screen and (max-width:1200px){
+   .humburger-menu{
+       display: block;
+   }
 }
 `;
 

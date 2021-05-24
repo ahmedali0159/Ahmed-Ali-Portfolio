@@ -44,7 +44,7 @@ function Contact() {
                 </form>
             </div>
             <div className="right-content">
-                <ContactItem title={'Phone'} icon={phone} contact1={'+8801752976802'} contact2={'+66 55 88 22 11025'} />
+                <ContactItem title={'Phone'} icon={phone} contact1={'+8801752976802'} />
                 <ContactItem title={'Email'} icon={email} contact1={'ahmedali69325@gmail.com'} contact2={'ahmedbinaziz418@gmail.com'} />
                 <ContactItem title={'Address'} icon={location} contact1={'Uttar Badda'} contact2={''} />
             </div>
@@ -66,9 +66,10 @@ const ContactStyled = styled.div `
             }
         }
         .right-content{
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
             
+             
         }
         .contact-title{
             h4{
@@ -78,6 +79,9 @@ const ContactStyled = styled.div `
             }
         }
         .form{
+            width: 100%;
+           
+          
             .form-field{
                 margin-top: 2rem;
                 width: 100%;

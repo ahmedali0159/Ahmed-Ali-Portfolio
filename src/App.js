@@ -19,10 +19,9 @@ import { useEffect } from "react";
 function App() {
   const [theme, setTheme] = useState('dark-theme');
   const [checked, setChecked] = useState(false);
-   const [navToggle, setNavToggle] = useState(false);
-
+  const [navToggle, setNavToggle] = useState(false);
    useEffect(()=> {
-    document.documentElement.className=theme;
+    document.documentElement.className= theme;
    }, [theme]);
 
    const themeToggler = () =>{
@@ -40,7 +39,7 @@ function App() {
   // }
   return (
  <div className="App">
-   <Sidebar navToggle={navToggle}/>
+   <Sidebar navToggle={navToggle} />
    <div className="theme">
    <div className="light-dark-mode">
       <div className="left-content">
@@ -53,25 +52,28 @@ function App() {
                   inputProps={{ 'aria-label': '' }}
                   size="medium"
                   onClick={themeToggler}
-                  
-                  
        />
       </div>
     </div>
    </div>
+   <div className="ham-burger-menu">
+     <IconButton onClick={() => setNavToggle(!navToggle)}>
+       <MenuIcon />
+     </IconButton>
+   </div>
+
+   {/* <div className="ham-bergur-menu">
+      <IconButton onClick={() => setNavToggle(!navToggle)}>
+        <MenuIcon />
+      </IconButton>
+    </div> */}
+    
    <MainContentStyled >
     <div className="lines">
       <div className="line1"></div>
       <div className="line2"></div>
       <div className="line3"></div>
       <div className="line4"></div>
-    </div>
-    
-  
-    <div className="humbergur-menu">
-      <IconButton onClick={() => setNavToggle(!navToggle)}>
-        <MenuIcon />
-      </IconButton>
     </div>
     <Switching>
      <Route  path="/" exact>

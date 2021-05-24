@@ -9,7 +9,7 @@ function Home() {
         <HomePageStyled>
             <div className="typhography">
                 <h1>Hi, I am<span> Ahmed Ali</span></h1>
-                <p>I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.</p>
+                <p>MERN Stack Developer</p>
                 <div className="icons">
                     <a href="https://twitter.com/AhmedAl71975127" target="blank" className="icon twitter">
                         <TwitterIcon />

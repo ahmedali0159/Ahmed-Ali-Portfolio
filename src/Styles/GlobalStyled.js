@@ -101,14 +101,12 @@ h1{
 span{
     color: var(--primary-color);
 }
-.u-margin-bottom{
-    margin-bottom: 4rem;
-}
+
 
 .light-dark-mode{
     position: fixed;
     right: 0;
-    top: 10%;
+    top: 20%;
     background-color: var(--background-dark-grey);
     width: 6rem;
     height: 2rem;
@@ -123,23 +121,23 @@ span{
       color: var(--white-color);
     }
   }
-
-.humburger-menu{
-    position: absolute;
-    right: 5%;
-    top: 3%; 
-    display: none;
-    z-index: 15;
-    svg{
-        font-size: 3rem;
-    }
+  .ham-burger-menu{
+      position: fixed;
+      right: 0;
+      top: 3%;
+      z-index: 15;
+      display: none;
+      svg{
+          font-size: 3rem;
+      }
   }
   .nav-toggle{
     transform: translateX(0);
     z-index: 20;
-}
+  }
+
   @media screen and (max-width:1200px){
-   .humburger-menu{
+   .ham-burger-menu{
        display: block;
    }
 }

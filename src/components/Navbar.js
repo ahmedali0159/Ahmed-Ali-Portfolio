@@ -1,11 +1,21 @@
 import React from 'react'
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
-import avatar from '../images/ahmed profile2.jpg';
+import avatar from '../images/Ahmed avatar.jpg';
 import HomeIcon from '@material-ui/icons/Home';
+import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+import SettingsEthernetIcon from '@material-ui/icons/SettingsEthernet';
+import WorkIcon from '@material-ui/icons/Work';
+import BookIcon from '@material-ui/icons/Book';
+import ContactsIcon from '@material-ui/icons/Contacts';
 
 function Navbar() {
     const home = <HomeIcon />
+    const about = <PermIdentityIcon />
+    const skills = <SettingsEthernetIcon />
+    const portfolio = <WorkIcon />
+    const blog = <BookIcon />
+    const contact= <ContactsIcon />
     return (
         < NavbarStyled >
             <div className="avatar">
@@ -13,22 +23,22 @@ function Navbar() {
             </div>
             <ul className="nav-items">
                 <li className="nav-item">
-                <NavLink to="/" exact activeClassName="active-class">{home} Home</NavLink>
+                <NavLink to="/" exact activeClassName="active-class">{home}</NavLink>
                 </li>
                 <li className="nav-item">
-                <NavLink to="/about" exact activeClassName="active-class">About</NavLink>
+                <NavLink to="/about" exact activeClassName="active-class">{about}</NavLink>
                 </li>
                 <li className="nav-item">
-                <NavLink to="/skills" exact activeClassName="active-class">Skills</NavLink>
+                <NavLink to="/skills" exact activeClassName="active-class">{skills}</NavLink>
                 </li>
                 <li className="nav-item">
-                <NavLink to="/portfolios" exact activeClassName="active-class">Portfolios</NavLink>
+                <NavLink to="/portfolios" exact activeClassName="active-class">{portfolio}</NavLink>
                 </li>
                 <li className="nav-item">
-                <NavLink to="/blog" exact activeClassName="active-class">Blogs</NavLink>
+                <NavLink to="/blog" exact activeClassName="active-class">{blog}</NavLink>
                 </li>
                 <li className="nav-item">
-                <NavLink to="/contact" exact activeClassName="active-class">Contact</NavLink>
+                <NavLink to="/contact" exact activeClassName="active-class">{contact}</NavLink>
                 </li>
             </ul>
             <footer>
@@ -89,6 +99,7 @@ const NavbarStyled = styled.nav `
                 z-index: 3;
                 opacity: 0.21;
                 transform-origin: right;
+                z-index: -1;
             }
         }
         a:hover::before{

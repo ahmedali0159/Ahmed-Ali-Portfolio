@@ -14,12 +14,12 @@ function Menu({ menuItem }) {
                 <img src={item.image} alt="" />
                 <ul>
                   <li>
-                    <a href={item.link1}>
+                    <a href={item.link1} target="blank">
                       <GitHubIcon style={{color: "white"}} />
                     </a>
                   </li>
                   <li>
-                    <a href={item.link2}>
+                    <a href={item.link2} target="blank">
                       <VisibilityIcon style={{color: "white"}} />
                     </a>
                   </li>

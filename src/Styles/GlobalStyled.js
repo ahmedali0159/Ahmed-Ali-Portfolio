@@ -3,7 +3,7 @@ import {createGlobalStyle} from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 :root{
     --primary-color: #007bff;
-    --primary-color-light: #057FFF;
+    --primary-color-light: #FE8C55;
     --secondary-color: #6c757d;
     --background-dark-color: #10121A;
     --background-dark-grey: #191D2B;
@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     --background-color: #000;
 }
 .light-theme{
-    --primary-color: #007bff;
+    --primary-color: #FE8C55;
     --primary-color-light: #057FFF;
     --secondary-color: #ff7675;
     --background-dark-color: #F1F1F1;
@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-track-color: #383838;
 }
 .dark-theme{
-    --primary-color: #007bff;
+    --primary-color: #FE8C55;
     --primary-color-light: #057FFF;
     --secondary-color: #6c757d;
     --background-dark-color: #10121A;

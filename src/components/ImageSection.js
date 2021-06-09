@@ -30,7 +30,7 @@ function ImageSection() {
                         <p>: Uttar badda, Dhaka-1212</p>
                     </div>
                 </div>
-               <a href="https://github.com/ahmedali0159" target="blank">
+               <a href="https://drive.google.com/file/d/1-BAPNupAJZrQu0hzSJm4na_4XXazNRtE/view?usp=sharing" target="blank">
                <PrimaryButton title={'Download Cv'}></PrimaryButton>
                </a>
             </div>

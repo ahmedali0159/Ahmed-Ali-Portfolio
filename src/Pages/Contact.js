@@ -45,8 +45,8 @@ function Contact() {
             </div>
             <div className="right-content">
                 <ContactItem title={'Phone'} icon={phone} contact1={'+8801752976802'} />
-                <ContactItem title={'Email'} icon={email} contact1={'ahmedali69325@gmail.com'} contact2={'ahmedbinaziz418@gmail.com'} />
-                <ContactItem title={'Address'} icon={location} contact1={'Uttar Badda'} contact2={''} />
+                <ContactItem title={'Email'} icon={email} contact1={'ahmedali69325@gmail.com'}/>
+                <ContactItem title={'Address'} icon={location} contact1={'GM Bari, House No: 21 Uttar Badda-1212'} contact2={'Dhaka,Bangladesh'} />
             </div>
          </InnerLayout>
          </ContactStyled>
@@ -68,19 +68,23 @@ const ContactStyled = styled.div `
         .right-content{
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            
+            @media screen and (max-width:502px){
+                width: 70%;
+            }
              
         }
         .contact-title{
             h4{
                 color: var(--white-color);
                 font-size: 1.8rem;
-                padding: 1rem;
+                padding: 1rem 0;
             }
         }
         .form{
             width: 100%;
-           
+           @media screen and (max-width:502px){
+               width:100%;
+           }
           
             .form-field{
                 margin-top: 2rem;

@@ -1,4 +1,5 @@
 import React from 'react'
+import emailjs from 'emailjs-com';
 import {MainLayout, InnerLayout} from '../Styles/Layout';
 import styled from 'styled-components';
 import Title from '../components/Title';
@@ -9,6 +10,17 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import ContactItem from '../components/ContactItem';
 
 function Contact() {
+    const sendEmail = e => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_2tezezm', 'template_7byks2j', e.target, "user_t43nGAbGQsJPrqZVYQs9N")
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        e.target.reset();
+    }
     const phone = <PhoneIcon />
     const email = <EmailIcon />
     const location = <LocationOnIcon />
@@ -21,25 +33,27 @@ function Contact() {
                 <div className="contact-title">
                     <h4>Get In Touch</h4>
                 </div>
-                <form  className="form">
+                <form onSubmit={sendEmail}  className="form">
                     <div className="form-field">
                         <label htmlFor="name" >Enter Your Name*</label>
-                        <input type="text" id="name" />
+                        <input type="text" id="name" name="name" />
                     </div>
                     <div className="form-field">
                         <label htmlFor="email" >Enter Your Email*</label>
-                        <input type="text" id="email" />
+                        <input type="text" id="email" name="user_email" />
                     </div>
                     <div className="form-field">
                         <label htmlFor="subject" >Enter Your Subject*</label>
-                        <input type="text" id="subject" />
+                        <input type="text" id="subject"  name="subject"/>
                     </div>
                     <div className="form-field">
                         <label htmlFor="">Enter Your Message*</label>
-                        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                        <textarea name="message" id="textarea" cols="30" rows="10"></textarea>
                     </div>
                     <div className="form-field f-btn">
-                        <PrimaryButton title={'Send Mail'} />
+                    
+                      <input className="pointer" type="submit" value="send"  />
+                      
                     </div>
                 </form>
             </div>
@@ -59,6 +73,7 @@ const ContactStyled = styled.div `
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 2rem;
+      
         @media screen and (max-width: 978px){
             grid-template-columns: repeat(1, 1fr);
             .f-btn{
@@ -82,7 +97,7 @@ const ContactStyled = styled.div `
         }
         .form{
             width: 100%;
-           @media screen and (max-width:502px){
+           @media screen and (max-width:500px){
                width:100%;
            }
           
@@ -115,6 +130,9 @@ const ContactStyled = styled.div `
                     color: inherit;
                     width: 100%;
                     padding: .8rem 1rem;
+                }
+                .pointer{
+                    cursor: pointer;
                 }
             }
         }
